@@ -1,0 +1,27 @@
+@import "variables/personal_variables";
+@import "variables/bootstrap_variables";
+
+@import "bootstrap";
+@import "font-awesome";
+@import "components/*";
+
+.fond {
+  background: url('https://i.pinimg.com/originals/bb/7c/d0/bb7cd07b6245e1413978be43a1a8bd68.jpg') no-repeat center center;
+  
+
+  height: 300px; /* On met ici la même hauteur que le jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+ }
+ .jumbotron {
+  margin-bottom: 0px;
+  height: 300px;
+  color: white; /* Le texte sera affiché en blanc */
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+ }
+
+ h1 {
+   margin-left: 5px;
+ }

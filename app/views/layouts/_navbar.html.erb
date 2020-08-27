@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <%= link_to "Spotitube team GmailLike", root_path, class: "navbar-brand" %>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+      <% unless user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "S'inscrire", new_user_registration_path, class: "nav-link" %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <% end %>
+      
+    </ul>
+        <img class="rounded-circle" height="50px" width="50px" src="https://i.pinimg.com/originals/07/a4/20/07a420f822e2d0624c76efba4fbb0b24.jpg">
+  </div>
+</nav>
