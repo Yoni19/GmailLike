@@ -6729,3 +6729,2747 @@ Processing by EmailsController#index as HTML
 Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-08-27 14:10:53 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-27 14:10:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+Completed 200 OK in 267ms (Views: 245.1ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-27 14:11:10 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BvWZSyGVidS6xISceijrDoV3e0kwbJ+6Exq0aJreJAUJJarpaCFxECbI+Npqb2z2H7dzi3cM80S8pG424D4BiQ==", "user"=>{"email"=>"anthony@test.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anthony@test.fr"], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:11:10 +0200
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.5ms)
+  Rendered emails/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 35.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:15 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:15 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:16 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:16 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:16 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:16 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:47 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:48 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 21.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:48 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 15.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:48 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:48 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:49 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:49 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:50 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:50 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:50 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:50 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:50 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:51 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:52 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 17.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-27 14:11:54 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"authenticity_token"=>"jM4LMvJgP4KXBbq1nYZmCqF9EI8ASk0H1NkIaPhX3zRp5w73+H0QoEB1PksaErWh/qCZ1C+VnRIexyG1rK+iLQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[36mEmail Create (9.3ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Recalled to Life"], ["body", "Iusto soluta aliquam. Quia quam ut. Quo alias velit."], ["created_at", "2020-08-27 12:11:54.244180"], ["updated_at", "2020-08-27 12:11:54.244180"]]
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:19
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.7ms)
+  Rendered emails/create.js.erb (6.2ms)
+Completed 200 OK in 47ms (Views: 23.7ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-27 14:11:55 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"authenticity_token"=>"jM4LMvJgP4KXBbq1nYZmCqF9EI8ASk0H1NkIaPhX3zRp5w73+H0QoEB1PksaErWh/qCZ1C+VnRIexyG1rK+iLQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[36mEmail Create (0.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Time of our Darkness"], ["body", "Sint fugiat eum. Fugiat nihil deleniti. Non iste ut."], ["created_at", "2020-08-27 12:11:55.611480"], ["updated_at", "2020-08-27 12:11:55.611480"]]
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:19
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.5ms)
+  Rendered emails/create.js.erb (3.3ms)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:57 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:58 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 19.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:58 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 20.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:58 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:11:58 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:00 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:00 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:00 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:00 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 16.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:01 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:01 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:09 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 17.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:11 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:11 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 14.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:12 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:12 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 19.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:12 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:13 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:13 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 15.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:14 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 17.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:14 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 22.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:15 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.7ms)
+Completed 200 OK in 28ms (Views: 17.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:16 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:17 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:17 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:12:18 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:27 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[36mEmail Update (5.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-08-27 12:14:27.222981"], ["id", 48]]
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 11.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.8ms)
+Completed 200 OK in 21ms (Views: 13.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:14:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[36mEmail Update (0.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-08-27 12:14:33.898927"], ["id", 49]]
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 13.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:14:34 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:34 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:35 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:14:36 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:14:36 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 17.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:14:37 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/show.js.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:32:17 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.5ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+Completed 200 OK in 306ms (Views: 284.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:32:19 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.7ms)
+  Rendered emails/show.js.erb (4.1ms)
+Completed 200 OK in 33ms (Views: 18.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:32:20 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.5ms)
+Completed 200 OK in 26ms (Views: 18.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:32:20 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.6ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:32:21 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.7ms)
+  Rendered emails/show.js.erb (3.8ms)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:32:21 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (4.2ms)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:32:22 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.4ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:32:22 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:32:22 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (1.9ms)
+  Rendered emails/show.js.erb (6.2ms)
+Completed 200 OK in 26ms (Views: 18.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:32:22 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.9ms)
+  Rendered emails/show.js.erb (6.4ms)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:33:00 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.4ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+Completed 200 OK in 266ms (Views: 244.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:02 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (6.7ms)
+Completed 200 OK in 31ms (Views: 20.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:02 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.8ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:03 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.9ms)
+  Rendered emails/show.js.erb (4.1ms)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:03 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.4ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:33:04 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:33:04 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:05 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (5.6ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:05 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (4.0ms)
+Completed 200 OK in 32ms (Views: 20.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:33:10 +0200
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.6ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:11 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (4.4ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:11 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:12 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (4.0ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:33:27 +0200
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.4ms)
+  Rendered emails/_email.html.erb (0.2ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (4.1ms)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:29 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.5ms)
+Completed 200 OK in 26ms (Views: 18.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:33:36 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.5ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+Completed 200 OK in 264ms (Views: 243.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:38 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.9ms)
+  Rendered emails/show.js.erb (5.7ms)
+Completed 200 OK in 29ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:39 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (5.6ms)
+Completed 200 OK in 29ms (Views: 19.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:40 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:40 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.9ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:40 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.7ms)
+Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:33:41 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.4ms)
+  Rendered emails/show.js.erb (2.8ms)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:33:41 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:33:41 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (3.9ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:41 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.7ms)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:42 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (1.0ms)
+  Rendered emails/show.js.erb (4.2ms)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:33:42 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (1.9ms)
+  Rendered emails/show.js.erb (6.4ms)
+Completed 200 OK in 29ms (Views: 21.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:33:42 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:34:16 +0200
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.4ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:34:27 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.7ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+Completed 200 OK in 270ms (Views: 249.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:34:29 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (2.1ms)
+  Rendered emails/show.js.erb (5.6ms)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.9ms)
+  Rendered emails/show.js.erb (5.6ms)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.8ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:34:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:34:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:34:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:34:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:34:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:34:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:34:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.4ms)
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:35:26 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.7ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/_email.html.erb (0.1ms)
+  Rendered emails/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+Completed 200 OK in 290ms (Views: 268.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:35:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 21ms (Views: 14.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:35:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.6ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:35:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.5ms)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:35:28 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (1.0ms)
+  Rendered emails/show.js.erb (4.2ms)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:35:29 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:35:29 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.5ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:35:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (2.8ms)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:35:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:35:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.4ms)
+  Rendered emails/show.js.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:35:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.4ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:35:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (2.9ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:35:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (3.7ms)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-27 14:38:13 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/_email.html.erb (0.6ms)
+  Rendered emails/_email.html.erb (0.2ms)
+  Rendered emails/_email.html.erb (0.2ms)
+  Rendered emails/index.html.erb within layouts/application (19.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+Completed 200 OK in 288ms (Views: 255.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:15 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.4ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:18 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.6ms)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:38:19 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.5ms)
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:19 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.1ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:30 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.7ms)
+  Rendered emails/show.js.erb (3.9ms)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (4.0ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:38:31 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.8ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:32 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.9ms)
+  Rendered emails/show.js.erb (5.2ms)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (5.0ms)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.7ms)
+  Rendered emails/show.js.erb (4.2ms)
+Completed 200 OK in 26ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:38:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:34 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (1.3ms)
+  Rendered emails/show.js.erb (5.9ms)
+Completed 200 OK in 27ms (Views: 19.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:34 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (4.5ms)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:38:35 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (4.4ms)
+Completed 200 OK in 27ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:35 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:35 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.3ms)
+Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-27 14:38:36 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"authenticity_token"=>"igA9D2VHYzBONWC8QojFzSPVlfIOkLhBUZNkO2rN56VvKTjKb1pMEplF5ELFHBZmfAgcqSFPaFSbjU3mPjWavA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Far From the Madding Crowd"], ["body", "Molestiae nulla magni. Et et quod. Et dolores dolores."], ["created_at", "2020-08-27 12:38:36.883369"], ["updated_at", "2020-08-27 12:38:36.883369"]]
+  ↳ app/controllers/emails_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:19
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.5ms)
+  Rendered emails/create.js.erb (3.2ms)
+Completed 200 OK in 93ms (Views: 14.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:38:39 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (5.4ms)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/emails/48" for ::1 at 2020-08-27 14:38:40 +0200
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-08-27 12:38:40.588412"], ["id", 48]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:33
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 14.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/emails/49" for ::1 at 2020-08-27 14:38:41 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.4ms)
+Completed 200 OK in 25ms (Views: 16.3ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/emails/49" for ::1 at 2020-08-27 14:38:41 +0200
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[36mEmail Update (0.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-08-27 12:38:41.810622"], ["id", 49]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:33
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 14.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:42 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.5ms)
+  Rendered emails/show.js.erb (3.2ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/emails/47" for ::1 at 2020-08-27 14:38:43 +0200
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-08-27 12:38:43.053531"], ["id", 47]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:33
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/emails/47" for ::1 at 2020-08-27 14:38:43 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[36mEmail Update (0.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-08-27 12:38:43.934319"], ["id", 47]]
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.8ms)
+  Rendered emails/show.js.erb (4.1ms)
+Completed 200 OK in 30ms (Views: 19.9ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/emails/47" for ::1 at 2020-08-27 14:38:46 +0200
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:42
+  [1m[36mEmail Destroy (1.0ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 47]]
+  ↳ app/controllers/emails_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:42
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 14.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/emails/48" for ::1 at 2020-08-27 14:39:33 +0200
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/yoni/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[36mEmail Update (0.3ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-08-27 12:39:33.277441"], ["id", 48]]
+  ↳ app/controllers/emails_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:9
+  Rendering emails/show.js.erb
+  Rendered emails/_show.html.erb (0.6ms)
+  Rendered emails/show.js.erb (3.9ms)
+Completed 200 OK in 26ms (Views: 18.1ms | ActiveRecord: 1.3ms)
+
+
